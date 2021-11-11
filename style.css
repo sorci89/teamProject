@@ -52,6 +52,7 @@ select {
 html,
 body {
   height: 100%;
+  font-family: 'Roboto', sans-serif;
 }
 
 
@@ -252,8 +253,8 @@ nav a:hover {
 }
 #section02{
   position: relative;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 70vh;
 }
 #box-for-circles{
   position: absolute;
@@ -308,19 +309,26 @@ nav a:hover {
     justify-content: center;
     text-align: center;
     padding-top: 20px;
-   
+  }
+
+  #section02{
+    position: relative;
+    width: 100vw;
+    height: 100%;
   }
 
 }
 
 #section03 {
+  position: relative;
   width: 100vw;
-  height: fit-content;
+  height: 100%;
   background-color: lightgray;
+ 
 }
 
 #section03 h1 {
-  font-size: 60px;
+  font-size: 40px;
   padding-top: 50px;
   padding-bottom: 50px;
 }
@@ -328,6 +336,7 @@ nav a:hover {
 #section03 p {
   font-size: 20px;
   margin-bottom: 30px;
+  text-align: justify;
 }
 
 li {
@@ -337,6 +346,7 @@ li {
 }
 
 #section04 {
+  /* position: relative; */
   width: 100vw;
   height: fit-content;
   background-color: rgb(167, 167, 167);
@@ -352,32 +362,51 @@ li {
   font-size: 45px;
 }
 
+
+
 #section05 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
   width: 100vw;
-  height: fit-content;
   text-align: center;
   color: white;
   background-color: #17252a;
+  background: url(/src/UK-Launches-Competition-to-Mitigate-Offshore-Wind-Farm-Radar-Risk.png) center center / cover no-repeat;
 }
 
 #section05 h1 {
-  font-size: 60px;
-  color: #ffcb9a;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  font-family: sans-serif;
+  font-size: 40px;
+  color: #fcbb7e;
 }
 
 #section05 h2 {
-  padding-bottom: 40px;
-  font-size: 30px;
-  color: rgb(54, 206, 198);
+  padding-top: 30px;
+  font-family: sans-serif;
+  font-size: 25px;
+  color: rgb(255, 255, 255);
+}
+
+#section05 h3 {
+  padding-top: 5px;
+  font-family: sans-serif;
+  font-size: 20px;
+  color: rgb(255, 255, 255);
 }
 
 #section05 p {
-  font-size: 25px;
-  color: #def2f1;
+  font-family: sans-serif;
+  font-weight: lighter;
+  font-size: 20px;
+  color: #cdf2fd;
 }
 
-.mapouter {
-  margin: 30px auto 30px auto;
+#contact-1 {
+  margin: 30px;
+}
+
+#contact-2 {
+  margin: 30px;
 }
