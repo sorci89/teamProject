@@ -286,51 +286,19 @@ nav a:hover {
   width: 200px;
 }
 
-@media only screen and (max-width: 668px)  {
-  .main-title {
-    top: 50%;
-    left: 50%;
-    font-size: 50px;
-  }
-  
-
-  #box-for-circles{
-    display: flex;
-    padding-top: 0;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-
-  }
-  
-  .circle-contaniner{
-    display: flex;
-    width: 50%;
-    justify-content: center;
-    text-align: center;
-    padding-top: 20px;
-  }
-
-  #section02{
-    position: relative;
-    width: 100vw;
-    height: 100%;
-  }
-
-}
 
 #section03 {
   position: relative;
   width: 100vw;
   height: 100%;
   background-color: lightgray;
- 
+  
 }
+
 
 #section03 h1 {
   font-size: 40px;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  /* margin-bottom: 50px; */
 }
 
 #section03 p {
@@ -340,9 +308,8 @@ nav a:hover {
 }
 
 li {
-  font-size: 25px;
+  font-size: 20px;
   margin-bottom: 10px;
-  list-style-type: square;
 }
 
 #section04 {
@@ -353,16 +320,17 @@ li {
 }
 
 #section04 h1 {
-  font-size: 60px;
+  font-size: 40px;
   padding-top: 50px;
   padding-bottom: 50px;
 }
 
 #section04 h3 {
-  font-size: 45px;
+  font-size: 30px;
 }
 
 #section04 p {
+  font-size: 20px;
   text-align: justify;
 }
 
@@ -411,4 +379,36 @@ li {
 
 #contact-2 {
   margin: 30px;
+}
+
+
+@media only screen and (max-width: 668px)  {
+  .main-title {
+    top: 50%;
+    left: 50%;
+    font-size: 50px;
+  }
+  
+
+  #box-for-circles{
+    /* display: flex; */
+    /* padding-top: 0; */
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+  }
+  
+  .circle-contaniner{
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    text-align: center;
+    padding-top: 20px;
+  }
+
+  #section02{
+    height: 100%;
+  }
+
 }
