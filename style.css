@@ -257,7 +257,7 @@ nav a:hover {
   height: 70vh;
 }
 #box-for-circles{
-  position: absolute;
+  /* position: absolute; */
   display: flex;
   padding-top: 100px;
   justify-content: space-around;
@@ -291,6 +291,7 @@ nav a:hover {
   position: relative;
   width: 100vw;
   height: 100%;
+  padding: 20px;
   background-color: lightgray;
   
 }
@@ -299,6 +300,9 @@ nav a:hover {
 #section03 h1 {
   font-size: 40px;
   /* margin-bottom: 50px; */
+  padding-top: 30px;
+  padding-bottom: 20px;
+  color: #274c77;
 }
 
 #section03 p {
@@ -317,16 +321,21 @@ li {
   width: 100vw;
   height: fit-content;
   background-color: rgb(167, 167, 167);
+  padding: 20px;
 }
 
 #section04 h1 {
   font-size: 40px;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  color: #274c77;
 }
 
 #section04 h3 {
   font-size: 30px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  text-decoration: underline;
 }
 
 #section04 p {
