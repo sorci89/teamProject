@@ -362,7 +362,9 @@ li {
   font-size: 45px;
 }
 
-
+#section04 p {
+  text-align: justify;
+}
 
 #section05 {
   display: flex;
