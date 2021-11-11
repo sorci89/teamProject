@@ -16,7 +16,6 @@
 ol,
 ul,
 li {
-  list-style: none;
   display: block;
 }
 
@@ -316,7 +315,7 @@ nav a:hover {
 
 #section03 {
   width: 100vw;
-  height: 100vh;
+  height: fit-content;
   background-color: lightgray;
 }
 
@@ -327,7 +326,14 @@ nav a:hover {
 }
 
 #section03 p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+li {
   font-size: 25px;
+  margin-bottom: 10px;
+  list-style-type: square;
 }
 
 #section04 {
