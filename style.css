@@ -5,11 +5,8 @@
   border: 0;
   outline: none;
   box-sizing: border-box;
-
   background: transparent;
-
   font-family: inherit;
-
   text-decoration: none;
 }
 
@@ -55,15 +52,17 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+/*MENÜSOR*/
 
 nav {
+  position: fixed;
   display: flex;
   width: 100%;
-  position: fixed;
+  z-index: 99;
+  
   overflow: hidden;
   justify-content: flex-start;
   background: #1A1E23;
-  z-index: 99;
 }
 
 #nav-logo {
@@ -72,57 +71,68 @@ nav {
 
 nav a {
   padding: 15px;
-  color: gray;
+  font-size: 20px;
+
+  color: rgb(163, 163, 163);
 }
 
 nav a:hover {
   padding: 15px;
+
   color: rgb(209, 209, 209);
 }
 
 .search-bar {
   display: flex;
   width: 100%;
+  height: 70%;
 
+  margin-top: 12px;
+  margin-right: 10px;
 }
 
 .search-bar input {
-  border-radius: 10px;
-  background-color: whitesmoke;
+  align-items: flex-end;
   padding: 5px;
   margin-left: auto;
   margin-right: 5px;
-  align-items: flex-end;
+
+  background-color: whitesmoke;
+  border-radius: 10px;
 }
 
+/*NYÍTÓOLDAL*/
 
 #text-container{
   position: absolute;
   width: 100%;
   top: 50%;
   left: 50%;
+  z-index: 98;
+
   transform: translate(-50%, -50%);
   color: rgb(250, 250, 250);
   text-align: center;
-  z-index: 98;
 }
 
 .main-title {
   top: 50%;
   left: 50%;
-  font-size: 70px;
 
-
+  font-size: 75px;
+  text-shadow: 2px 2px #555555;
 }
 
 .sub-title {
   top: 56%;
   left: 50%;
+
   font-size: 40px;
 }
 
 .sub-sub-title {
   top: 60%;
+
   font-size: 20px;
 
 }
@@ -135,11 +145,12 @@ nav a:hover {
 
 #section01::after {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  content: '';
   width: 100%;
   height: 80%;
+  bottom: 0;
+  left: 0;
+
+  content: '';
   background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, .8) 80%, rgba(0, 0, 0, .8) 100%);
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, .8) 80%, rgba(0, 0, 0, .8) 100%);
 }
@@ -150,10 +161,11 @@ nav a:hover {
 
 .demo a {
   position: absolute;
-  bottom: 100px;
+  bottom: 50px;
   left: 50%;
   z-index: 2;
   display: inline-block;
+
   -webkit-transform: translate(0, -50%);
   transform: translate(-50%, -50%);
   color: #fff;
@@ -173,11 +185,12 @@ nav a:hover {
 
 #section01 a span {
   position: absolute;
-  top: 0;
-  left: 50%;
   width: 46px;
   height: 46px;
+  top: 0;
+  left: 50%;
   margin-left: -23px;
+
   border: 1px solid #fff;
   border-radius: 100%;
   box-sizing: border-box;
@@ -185,12 +198,13 @@ nav a:hover {
 
 #section01 a span::after {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  content: '';
   width: 16px;
   height: 16px;
+  top: 50%;
+  left: 50%;
   margin: -12px 0 0 -8px;
+  
+  content: '';
   border-left: 1px solid #fff;
   border-bottom: 1px solid #fff;
   -webkit-transform: rotate(-45deg);
@@ -200,12 +214,13 @@ nav a:hover {
 
 #section01 a span::before {
   position: absolute;
+  width: 44px;
+  height: 44px;
   top: 0;
   left: 0;
   z-index: -1;
+
   content: '';
-  width: 44px;
-  height: 44px;
   box-shadow: 0 0 0 0 rgba(255, 255, 255, .1);
   border-radius: 100%;
   opacity: 0;
@@ -251,105 +266,245 @@ nav a:hover {
     opacity: 0;
   }
 }
+
+/*HÍREK*/
+
 #section02{
   position: relative;
   width: 100vw;
-  height: 70vh;
+  height: fit-content;
+  padding: 20px;
+  text-align: center;
 }
+
+#section02 h2 {
+  margin-top: 15px;
+  margin-bottom: 20px;
+
+  color: #cced4b;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#section02 h3 {
+  margin: 5%;
+  
+  color: #274c77;
+  font-size: 23px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#section02 p {
+  text-align: justify;
+  padding: 15px;
+}
+
 #box-for-circles{
   /* position: absolute; */
   display: flex;
-  padding-top: 100px;
+  /*padding-top: 100px;*/
   justify-content: space-around;
   flex-direction: row;
+  margin: 20px;
 }
 
 .circle-contaniner{
   display: flex;
   width: 30%;
+  min-width: 300px;
+  margin: 2px;
+  padding: 10px;
   flex-direction: column;
   align-items: center;
   text-align: center;
+
+  border-radius: 25px;
+  background-color: #f5f5f5;
 }
 
+.circle {
+  display: block;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+
+.circle:hover {
+  opacity: 0.3;
+}
+
+.middle {
+  opacity: 0;
+}
+
+.circle:hover .middle {
+  opacity: 1;
+  position: absolute;
+
+  text-align: center;
+  margin-top: -160px;
+  margin-left: 50px;
+  font-size: 100px;
+  color: rgb(100, 100, 100);
+}
+
+
 #box-for-circles .circle{
-  background-color: rgb(68, 68, 68);
   height: 200px;
   width: 200px;
-  border-radius: 50%;
   margin-bottom: 40px;
+  
+  border-radius: 50%;
+  background-color: rgb(68, 68, 68);
 }
 
 .circle img {
-  border-radius: 50%;
   height: 200px;
   width: 200px;
+  
+  border-radius: 50%;
+  border: 1px solid #555;
 }
 
+#more {
+  font-size: 23px;
+  color: #555555;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#more:hover {
+  color: #274c77;
+}
+
+/*RÓLUNK*/
 
 #section03 {
   position: relative;
   width: 100vw;
-  height: 100%;
   padding: 20px;
-  background-color: lightgray;
+
+  background-color: rgb(228, 228, 228);
   
 }
 
+#paragraph {
+  position: relative;
+  margin-top: 27px;
+  margin-right: 10px;
+}
 
 #section03 h1 {
-  font-size: 40px;
   /* margin-bottom: 50px; */
   padding-top: 30px;
   padding-bottom: 20px;
+  
+  font-size: 35px;
   color: #274c77;
+  font-family: 'Montserrat', sans-serif;
 }
 
 #section03 p {
-  font-size: 20px;
+  margin-top: 20px;
   margin-bottom: 30px;
   text-align: justify;
+  margin-left: 60px;
+  margin-right: 60px;
+  
+  font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#section03 h2 {
+  text-align: justify;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  margin-left: 60px;
+  margin-right: 60px;
+  padding-top: 40px;
+  padding-left: 20px;
+  
+  font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
+
 }
 
 li {
-  font-size: 20px;
   margin-bottom: 10px;
+  margin-left: 80px;
+  margin-right: 50px;
+  
+  font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
+  color: #555555;
 }
+
+.goalimg {
+  width: 400px;
+  display: block;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-right: 80px;
+  margin-left: 80px;
+  border-radius: 10px;
+}
+
+/*SZOLGÁLTATÁS*/
 
 #section04 {
   /* position: relative; */
   width: 100vw;
   height: fit-content;
-  background-color: rgb(167, 167, 167);
   padding: 20px;
+  
+  background-color: rgb(192, 192, 192);
+  font-family: 'Montserrat', sans-serif;
 }
 
+
 #section04 h1 {
-  font-size: 40px;
   padding-top: 30px;
   padding-bottom: 20px;
+  
   color: #274c77;
+  font-size: 35px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#content {
+  width: 300px;
+  margin-top: 20px;
+  margin-left: 60px;
+  padding: 15px;
 }
 
 #section04 h3 {
-  font-size: 30px;
   padding-top: 30px;
   padding-bottom: 20px;
+  margin-left: 60px;
+  margin-right: 60px;
+  
+  color:#1A1E23;
+  font-size: 30px;
   text-decoration: underline;
 }
 
 #section04 p {
-  font-size: 20px;
   text-align: justify;
+  padding: 15px;
+  margin-left: 60px;
+  margin-right: 60px;
+  font-size: 20px;
 }
 
+/*KAPCSOLAT*/
+
 #section05 {
+  width: 100vw;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  width: 100vw;
   text-align: center;
+
   color: white;
   background-color: #17252a;
   background: url(/src/UK-Launches-Competition-to-Mitigate-Offshore-Wind-Farm-Radar-Risk.png) center center / cover no-repeat;
@@ -357,28 +512,30 @@ li {
 
 #section05 h1 {
   font-family: sans-serif;
-  font-size: 40px;
-  color: #fcbb7e;
+  font-size: 30px;
+  color: #cced4b;
 }
 
 #section05 h2 {
   padding-top: 30px;
+  margin-bottom: 10px;
+
   font-family: sans-serif;
-  font-size: 25px;
+  font-size: 20px;
   color: rgb(255, 255, 255);
 }
 
 #section05 h3 {
   padding-top: 5px;
   font-family: sans-serif;
-  font-size: 20px;
+  font-size: 15px;
   color: rgb(255, 255, 255);
 }
 
 #section05 p {
   font-family: sans-serif;
   font-weight: lighter;
-  font-size: 20px;
+  font-size: 15px;
   color: #cdf2fd;
 }
 
@@ -417,8 +574,6 @@ li {
   
   }
 
-  #section02{
-    height: 100%;
-  }
+
 
 }
